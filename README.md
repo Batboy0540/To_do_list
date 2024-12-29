@@ -1,6 +1,10 @@
 To-Do List Web Application
 A simple web-based To-Do List application built with Flask, Python, SQLAlchemy, and SQLite. This app allows users to add, update, delete, and categorize their tasks. It also includes user authentication for personalized task management.
 
+![Video thumbnail](https://img.youtube.com/vi/Vd9WAjeBd5c/0.jpg)
+[Watch the video here](https://youtu.be/Vd9WAjeBd5c)
+
+
 Features
 Task Management: Users can create, edit, and delete tasks.
 Task Status: Tasks can be categorized by status, such as "pending" or "completed."
