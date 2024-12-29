@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <a href="/logout">Logout</a>
+    <form action="/add" method="POST">
+        <input type="text" name="title" placeholder="Add a new task" required>
+        <button type="submit">Add</button>
+    </form>
+    <ul>
+        {% for task in tasks %}
+            <li>
+                {{ task.title }} - {{ task.status }}
+                <form action="/update_status/{{ task.id }}" method="POST">
+                    <select name="status" onchange="this.form.submit()">
+                        <option value="unfinished" {% if task.status == 'unfinished' %}selected{% endif %}>Unfinished</option>
+                        <option value="finished" {% if task.status == 'finished' %}selected{% endif %}>Finished</option>
+                    </select>
+                </form>
+                <a href="/delete/{{ task.id }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
